@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: deployment-service
   labels:
-    app: springOAuth2
+    app: springoauth2
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: springOAuth2
+      app: springoauth2
   template:
     metadata:
       labels:
-        app: springOAuth2
+        app: springoauth2
     spec:
       containers:
-        - name: springOAuth2
+        - name: springoauth2
           image: sriharipriya/springoauth2:${{ github.run_number }}
 
           ports: 
@@ -24,13 +24,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: springOAuth2-loadbalancer-service
+  name: springoauth2-loadbalancer-service
   labels:
-    app: springOAuth2
+    app: springoauth2
 spec:
   type: LoadBalancer
   selector:
-    app: springOAuth2
+    app: springoauth2
   ports:
     - protocol: TCP
       port: 8080
