@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: springOAuth2
-          image: sriharipriya/springOAuth2:${{ github.run_number }}
+          image: sriharipriya/springoauth2:${{ github.run_number }}
 
           ports: 
             - containerPort: 8080
